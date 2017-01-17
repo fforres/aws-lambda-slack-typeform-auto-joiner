@@ -7,7 +7,6 @@ function connectToMongo(cb) {
   MongoClient.connect(config.mongodb.url, function(err, db) {
     assert.equal(null, err);
     mongoConnection = db;
-    console.log("running callback");
     cb();
   });
 }
