@@ -1,0 +1,10 @@
+{
+  "name": "aws-lambda-slack-typeform-auto-joiner",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:fforres/aws-lambda-slack-typeform-auto-joiner.git",
+  "license": "MIT",
+  "dependencies": {
+    "mongodb": "^2.2.21"
+  }
+}
