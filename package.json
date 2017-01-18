@@ -4,7 +4,17 @@
   "main": "index.js",
   "repository": "git@github.com:fforres/aws-lambda-slack-typeform-auto-joiner.git",
   "license": "MIT",
+  "scripts": {
+    "deploy": "claudia create --version dev --region us-east-1 --handler lambda.handler",
+    "update": "claudia update",
+    "start": "nodemon index.js"
+  },
   "dependencies": {
-    "mongodb": "^2.2.21"
+    "mongodb": "^2.2.21",
+    "request": "^2.79.0"
+  },
+  "devDependencies": {
+    "claudia": "^2.5.0",
+    "nodemon": "^1.11.0"
   }
 }

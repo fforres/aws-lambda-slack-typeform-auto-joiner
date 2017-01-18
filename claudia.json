@@ -1,0 +1,7 @@
+{
+  "lambda": {
+    "role": "aws-lambda-slack-typeform-auto-joiner-executor",
+    "name": "aws-lambda-slack-typeform-auto-joiner",
+    "region": "us-east-1"
+  }
+}
