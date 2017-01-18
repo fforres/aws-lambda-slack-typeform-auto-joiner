@@ -1,4 +1,5 @@
 var MongoClient = require('mongodb').MongoClient;
+var fs = require('fs');
 var assert = require('assert');
 var config = require('./config.json');
 
@@ -31,6 +32,23 @@ function saveToMongo(data) {
   })
 }
 
+
+function asdasd(){
+  connectToMongo(function(){
+    console.log("ssss")
+    var collection = mongoConnection.collection('Emails');
+    collection.find({})
+    .toArray(function(err,docs){
+      data = docs.map(function(el){return el.email;});
+      fs.writeFile('file', data, 'utf8', function(){
+        console.log("done")
+      })
+      // console.log(require('util').inspect(data, { depth: Infinity }));
+    })
+  })
+}
+
+// asdasd();
 module.exports = {
   saveToMongo: saveToMongo,
   connectToMongo: connectToMongo,
